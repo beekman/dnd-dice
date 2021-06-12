@@ -1,5 +1,6 @@
 import React from 'react';
 import {FaDiceD20} from 'react-icons/fa';
+import {DiceRoller} from './components/DiceRoller';
 import './App.css';
 
 const App=()=> {
@@ -12,6 +13,7 @@ const App=()=> {
         <FaDiceD20 />  Roll Die
         </button>
       </header>
+      {DiceRoller}
     </div>
   );
 }
