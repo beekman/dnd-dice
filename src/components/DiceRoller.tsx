@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const DiceRoller = () => {
+export const DiceRoller = () => {
   const [count, setCount] = useState(3);
   const [sides, setSides] = useState(20);
   const [result, setResult] = useState(null);
@@ -10,10 +10,6 @@ const DiceRoller = () => {
     return 1 + Math.floor(Math.random() * sides);
   };
 
-  // Our "back-end" will roll a number of simulated dice,
-  // possibly adding a bonus or subtracting a penalty.
-  // It will return an object containing the rolls and their total.
-  // (This is really for no reason other than to show off interfaces.)
   interface RollResult {
     rolls: number[];
     total: number;
@@ -35,4 +31,12 @@ const DiceRoller = () => {
 
     return result;
   };
+
+let currentRolls=rollMany(count, sides);
+
+  return(
+    <>
+      {currentRolls};
+    </>
+  );
 };
