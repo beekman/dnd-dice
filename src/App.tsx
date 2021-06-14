@@ -12,8 +12,9 @@ const App=()=> {
         <button className="btn-roll-die">
         <FaDiceD20 />  Roll Die
         </button>
+      <DiceRoller />
       </header>
-      {DiceRoller}
+      <DiceRoller />
     </div>
   );
 }

@@ -32,11 +32,11 @@ export const DiceRoller = () => {
     return result;
   };
 
-let currentRolls=rollMany(count, sides);
+let currentRolls=rollMany(1, 6);
 
   return(
     <>
-      {currentRolls};
+      {roll(6)}
     </>
   );
 };
