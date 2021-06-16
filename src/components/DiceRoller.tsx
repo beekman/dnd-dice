@@ -32,11 +32,25 @@ export const DiceRoller = () => {
     return result;
   };
 
-let currentRolls=rollMany(1, 6);
+  let currentRolls=rollMany(1, 6);
+  console.log(currentRolls);
+
+  function handleChange() {
+    roll(sides);
+  }
+
+  function handleClick() {
+    roll(sides);
+  }
 
   return(
     <>
-      {roll(6)}
+    <p
+    onClick={handleClick}
+    onChange={handleChange}
+    >
+    {roll(sides)}
+    </p>
     </>
-  );
-};
+    );
+  };
